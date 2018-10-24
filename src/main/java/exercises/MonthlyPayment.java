@@ -115,7 +115,6 @@ public class MonthlyPayment {
 		// so the last payment needs to payoff the loan
 		if ((paymentNumber == loanInfo.getInitialTermMonths() + 1) &&
 				((curMonthlyPaymentAmount == 0) || (curMonthlyPaymentAmount == curMonthlyInterest))) {
-			System.out.print("paymentNumber " + paymentNumber);
 			curMonthlyPaymentAmount = curPayoffAmount;
 		}
 		// Calculate C = M - H, this is your monthly payment minus your monthly
