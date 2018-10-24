@@ -38,7 +38,7 @@ public class MonthlyPaymentOutputManager extends PrintFormat {
 		}
 	}
 
-	void printMonthlyPayment(Console console, MonthlyPayment aMonthlyPayment) {
+	private void printMonthlyPayment(Console console, MonthlyPayment aMonthlyPayment) {
 		printf(console, FORMAT_STRING, aMonthlyPayment.getPaymentNumber(),
 				((double) aMonthlyPayment.getCurMonthlyPaymentAmountIncents()) / 100d,
 				((double) aMonthlyPayment.getCurMonthlyInterestIncents()) / 100d,

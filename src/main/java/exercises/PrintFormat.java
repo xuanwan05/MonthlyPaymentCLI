@@ -4,11 +4,11 @@ import java.io.Console;
 import java.util.IllegalFormatException;
 
 public class PrintFormat {
-	void print(String s) {
+	public void print(String s) {
 		printf(null, "%s", s);
 	}
 
-	void printf(Console console, String formatString, Object... args) {
+	public void printf(Console console, String formatString, Object... args) {
 		try {
 			if (console != null) {
 				console.printf(formatString, args);
