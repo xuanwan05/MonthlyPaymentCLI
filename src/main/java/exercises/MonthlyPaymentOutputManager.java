@@ -11,7 +11,7 @@ public class MonthlyPaymentOutputManager extends PrintFormat {
 	// "CurrentBalance", "TotalPayments",
 	// "TotalInterestPaid");
 
-	MonthlyPaymentOutputManager(LoanInfo loanInfo) {
+	public MonthlyPaymentOutputManager(LoanInfo loanInfo) {
 		super();
 		this.loanInfo = loanInfo;
 	}
@@ -24,12 +24,12 @@ public class MonthlyPaymentOutputManager extends PrintFormat {
 		printMonthlyPaymentList(console, monthlyPaymentFullList);
 	}
 
-	void printHeader(Console console) {
+	private void printHeader(Console console) {
 		printf(console, FORMAT_STRING, "PaymentNumber", "PaymentAmount", "PaymentInterest", "CurrentBalance",
 				"TotalPayments", "TotalInterestPaid");
 	}
 
-	void printMonthlyPaymentList(Console console, List<MonthlyPayment> aMonthlyPaymentFullList) {
+	private void printMonthlyPaymentList(Console console, List<MonthlyPayment> aMonthlyPaymentFullList) {
 		// may be able to use stream to print info
 		// make it work for now
 

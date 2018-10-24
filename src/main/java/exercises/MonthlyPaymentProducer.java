@@ -31,8 +31,7 @@ public class MonthlyPaymentProducer {
 		return firstMonthlyPayment;
 	}
 		
-	private void generateAllMonthlyFromCurPayments(
-			MonthlyPayment curMonthlyPayment) {
+	private void generateAllMonthlyFromCurPayments(MonthlyPayment curMonthlyPayment) {
 		MonthlyPayment nextMonthlyPayment = curMonthlyPayment.generateNextMonthlyPayment();
 		if (nextMonthlyPayment == null) {
 			//done			
