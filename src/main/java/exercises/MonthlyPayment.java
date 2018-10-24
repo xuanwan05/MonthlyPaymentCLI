@@ -113,8 +113,9 @@ public class MonthlyPayment {
 		// or the monthly payment only covers the interest payment - i.e. no
 		// principal
 		// so the last payment needs to payoff the loan
-		if ((paymentNumber == loanInfo.getInitialTermMonths() - 1) &&
+		if ((paymentNumber == loanInfo.getInitialTermMonths() + 1) &&
 				((curMonthlyPaymentAmount == 0) || (curMonthlyPaymentAmount == curMonthlyInterest))) {
+			System.out.print("paymentNumber " + paymentNumber);
 			curMonthlyPaymentAmount = curPayoffAmount;
 		}
 		// Calculate C = M - H, this is your monthly payment minus your monthly
